@@ -1,0 +1,313 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  padding: 10px;
+  text-align: center;
+  color: white;
+  background-image: url('../../../public/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.week-orders{
+  background-color: #fff;
+  display: flex;
+  justify-content: left;
+  padding-left:2% ;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+  background-color: #dadada;
+  
+}
+.navbar-buttons{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+nav button {
+  background-color: white;
+  border: 1px solid #4CAF50;
+  color: #a5af4c;
+  padding: 0.5em;
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+
+.button-nav {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #77a5ff;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.button-nav:hover {
+  background-color: #23a0e9;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+.button-nav:focus {
+  outline: none;
+}
+
+.button-nav:active {
+  transform: translateY(0);
+  box-shadow: 0px 2px 4px rgba(0, 79, 251, 0.2);
+}
+
+
+nav button:hover {
+  background-color: #bdf1bf;
+  color: white;
+}
+
+main {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+}
+
+.meal-container {
+  margin: 20px;
+}
+
+.meal-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: calc(33.33% - 20px);
+  }
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  padding: 40px;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.card-details {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  text-align: left;
+  gap: 10px;
+}
+
+.card-rating {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 150px;
+  margin-top: 20px;
+
+
+}
+
+.star-rating {
+  color: #FFD700;
+}
+
+.card.selected {
+  border-color: #23a0e9;
+  box-shadow: 0 0 10px rgba(35, 160, 233, 0.5);
+}
+
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-content {
+  background: white;
+  padding: 2em;
+  border-radius: 8px;
+  width: 500px;
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 5.2em;
+  margin-bottom: 1em;
+  gap: 1em;
+}
+
+.week-button {
+  margin-bottom: 0.5em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #23a0e9;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.week-button.selected {
+  background-color: #1a78b8;
+}
+
+
+.right-button {
+  background-color: #17368d;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.right-button:hover {
+  background-color: #23a0e9;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.right-button:active {
+  transform: translateY(0);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.dialog-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dialouge-button {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+
+.checkbox-group label {
+  margin-bottom: 0.5em;
+}
+
+.cards-buttons {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #17368d;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #23a0e9;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: calc(50% - 20px);
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav button {
+    margin: 0.5em 0;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+  }
+
+  .button-group {
+    margin-top: 10px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .right-button {
+    flex: 1 1 auto;
+  }
+}
